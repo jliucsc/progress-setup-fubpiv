@@ -1,0 +1,53 @@
+
+<body>
+  <div class="header">
+    <h1 class="logo-name">compass</h1>
+  </div>
+  <div class="timeline-div">
+    <div class="timeline-event">
+      <p>Long Term Goals</p>
+      <div class="timeline-bottom-div">
+        <div class="circle-left" [style.background-color]="ltcolor"></div>
+        <div class="horizontal-line"></div>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <p>Quarter Goals</p>
+      <div class="timeline-bottom-div">
+        <div class="horizontal-line"></div>
+        <div class="circle" [style.background-color]="qcolor"></div>
+        <div class="horizontal-line"></div>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <p>Weekly Goals</p>
+      <div class="timeline-bottom-div">
+        <div class="horizontal-line"></div>
+        <div class="circle" [style.background-color]="wcolor"></div>
+        <div class="horizontal-line"></div>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <p>Organize</p>
+      <div class="timeline-bottom-div">
+        <div class="horizontal-line"></div>
+        <div class="circle" [style.background-color]="ocolor"></div>
+        <div class="horizontal-line"></div>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <p>Schedule</p>
+      <div class="timeline-bottom-div">
+        <div class="horizontal-line"></div>
+        <div class="circle-right" [style.background-color]="scolor"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card" [ngSwitch]="slide">
+    <blank-card (notifyParent)="getNotification($event)"*ngSwitchCase="'Long Term Goals'" [cardName]="'Long Term Goals'"></blank-card>
+    <blank-card [cardName]="'Quarter Goals'" (notifyParent)="getNotification($event)" *ngSwitchCase="'Quarter Goals'"></blank-card>
+    <info-card (notifyParent)="getNotification($event)"*ngSwitchCase="'Weekly Goals'"></info-card>
+    <blank-card [cardName]="'Organize'" (notifyParent)="getNotification($event)" *ngSwitchCase="'Organize'"></blank-card>
+    <blank-card [cardName]="'Schedule'"(notifyParent)="getNotification($event)" *ngSwitchCase="'Schedule'"></blank-card>
+  </div>
+</body>

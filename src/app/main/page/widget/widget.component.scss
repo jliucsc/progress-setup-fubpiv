@@ -1,0 +1,87 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat);
+*{
+  font-family: Montserrat;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #DBFAD6;
+}
+.header {
+  // replace this with your code
+  width: 100%;
+  height: 10%;
+  top: 0;
+  border: solid black;
+  background-color: white;
+}
+.logo-name {
+  margin-left: 35px;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #0BF282;
+}
+.timeline-div {
+  margin-top: 3%;
+  width: 92%;
+  height: 13%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.timeline-event {
+  height: 100%;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  align-items: center;
+}
+p{
+  font-size: 12px;
+  text-align: center;
+}
+.circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid gray;
+  margin-left: auto;
+  margin-right: auto;
+}
+.horizontal-line{
+  width: 37%;
+  height: 1px;
+  border: solid gray;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+}
+.timeline-bottom-div{
+  display: flex;
+}
+.circle-right{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid gray;
+  margin-right: auto;
+}
+.circle-left{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid gray;
+  margin-left: auto;
+}
+.card{
+  width: 60%;
+  height:65%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black;
+}
